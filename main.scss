@@ -1,1 +1,108 @@
+$card-width: 200px;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.people {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: $card-width $card-width;
+  grid-template-rows: auto;
+  gap: 40px 30px;
+  padding: 30px 35px;
+  min-width: 500px;
+
+  @media (min-width: 750px) {
+    padding: 30px 160px;
+  }
+  
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(4, $card-width);
+    padding: 30px 55px;
+  } 
+
+  @media (min-width: 1000px) {
+    padding: 30px 305px;
+  } 
+}
+
+.person {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: none;
+  width: 220px;
+  height: 287px;
+  border-radius: 12px;
+
+  &:hover {
+    background-color: rgb(238, 238, 238);
+
+    .person__extra{
+      display: block;
+    }
+
+    .person__photo {
+      border-radius: 60px;
+      transform: scale(1.1);
+    }
+
+    .person_name {
+      font-size: 24px;
+    }
+  }
+}
+
+.person__info {
+  position: relative;
+  align-items: center;
+}
+
+.person__photo {
+  object-fit: contain;
+  width: 200px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  transition: all 1s linear;
+}
+
+.person__rank {
+  position: absolute;
+  right: 10px;
+  top: 84px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
+  line-height: 32px;
+
+  color: rgb(139, 0, 0);
+  align-items: center;
+}
+
+.person__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.person_name {
+  font-size: 20px;
+  color: rgb(47, 79, 79);
+}
+
+.person__extra {
+  display: none;
+  font-weight: 400;
+  font-size: 21.6px;
+  color: black;
+}
 
