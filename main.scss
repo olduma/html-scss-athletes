@@ -3,7 +3,7 @@ $card-width: 200px;
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .people {
@@ -53,7 +53,7 @@ body {
       transform: scale(1.1);
     }
 
-    .person_name {
+    .person__name {
       font-size: 24px;
     }
   }
@@ -94,8 +94,7 @@ body {
   align-items: center;
 }
 
-.person_name {
-  font-size: 20px;
+.person__name {
   color: rgb(47, 79, 79);
 }
 
